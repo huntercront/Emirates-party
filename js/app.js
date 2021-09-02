@@ -1,7 +1,7 @@
 WebFontConfig = {
-    google: { families: ['Cormorant Infant:700&display=swap', 'Inter:400,600&display=swap'] }
+    google: { families: ['Cormorant Infant:700', 'Inter:400,600&display=swap'] }
 };
-
+// 'Cormorant Infant:700&display=swap', 
 (function(d) {
     var wf = d.createElement('script'),
         s = d.scripts[0];
@@ -41,14 +41,15 @@ Loader.prototype = {
 }
 
 
-var p = new Loader();
-p.require([
-        "/js/scroll.js"
-    ],
-    function() {});
 var l = new Loader();
 l.require([
         "/js/lazy-load.js"
+    ],
+    function() {});
+
+var l = new Loader();
+l.require([
+        "/js/scroll.js"
     ],
     function() {});
 
@@ -59,8 +60,6 @@ let menu = document.querySelector('.header-info')
 let overlay = document.querySelector('.header-overley')
 
 if (mMenu) {
-
-
     mMenu.addEventListener('click', function(e) {
 
         this.querySelector('.ham').classList.toggle('active')
@@ -79,12 +78,6 @@ if (mMenu) {
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
-
-
-
-
-
-
 
     let slideUp = (target, duration = 500) => {
         target.style.transitionProperty = 'height, margin, padding';
@@ -149,103 +142,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
     }
 
-    var wpcf7Elm = document.querySelector('.wpcf7');
-    if (wpcf7Elm) {
-        wpcf7Elm.addEventListener('wpcf7mailsent', function(event) {
-            console.log(event.detail.contactFormId)
-            slideUp(document.querySelector('.page-form-inner'), 300)
-            slideToggle(document.querySelector('.form-submit'), 300)
-            document.querySelector('.form-submit-inner').classList.add('form-submited')
-            const el = document.querySelector('.register');
-            el.scrollIntoView();
-        }, false);
-    }
-
-
-    function cleanForm(form) {
-        document.querySelector('.form-submit h4').textContent = "30 минут истекло, твои данные отправлены"
-        var wpcf7Elm = document.querySelector(".wpcf7-submit")
-        wpcf7Elm.click();
-        console.log('submit')
-    }
-
-    function startTimer(elem) {
-        function getTimeRemaining(endtime) {
-            var t = Date.parse(endtime) - Date.parse(new Date());
-            var seconds = Math.floor((t / 1000) % 60);
-            var minutes = Math.floor((t / 1000 / 60) % 60);
-            var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-            var days = Math.floor(t / (1000 * 60 * 60 * 24));
-            return {
-                total: t,
-                days: days,
-                hours: hours,
-                minutes: minutes,
-                seconds: seconds
-            };
-        }
-        var timer = elem.closest('.form-timer').getAttribute('timer-counter')
-        var minutes = elem.querySelector(".mins");
-        var seconds = elem.querySelector(".seconds");
-
-        function initializeClock(id, endtime) {
-
-
-            function updateClock() {
-                var t = getTimeRemaining(endtime);
-
-                if (t.total <= 0) {
-                    //                     slideToggle(elem.querySelector('.page-form-inner'), 200)
-                    //                     slideToggle(formTimer.querySelector('.test-start').closest('.timer-inner'), 200)
-                    elem.classList.remove('timer-started')
-                    cleanForm()
-                    clearInterval(timeinterval);
-                    return true;
-                }
-
-                minutes.innerHTML = ("0" + t.minutes).slice(-2);
-                seconds.innerHTML = ("0" + t.seconds).slice(-2);
-            }
-
-            updateClock();
-            var timeinterval = setInterval(updateClock, 1000);
-        }
-
-        var deadline = new Date(Date.parse(new Date()) + timer * 60 * 1000);
-        initializeClock("countdown", deadline);
-    }
-
-    let formTimer = document.querySelector('.form-timer')
-    if (formTimer) {
-        formTimer.querySelector('.test-start').addEventListener('click', function(e) {
-            slideToggle(formTimer.querySelector('.page-form-inner'), 200)
-            slideToggle(this.closest('.timer-inner'), 200)
-            formTimer.classList.add('timer-started')
-            startTimer(formTimer)
-        })
-    }
-
-
-
-
-    let books = document.querySelectorAll('.leaning-button')
-    books.forEach(function(book) {
-        book.addEventListener('click', function(event) {
-            if (event.target.closest('.leaning-el').classList.contains('active-el')) {
-                slideUp(event.target.closest('.leaning-el').querySelector('.hidden-list'), 300);
-                event.target.closest('.leaning-el').classList.remove('active-el');
-            } else {
-                if (document.querySelector('.active-el')) {
-                    slideToggle(document.querySelector('.active-el .hidden-list'), 300);
-                    document.querySelector('.active-el').classList.toggle('active-el');
-                }
-                slideDown(event.target.closest('.leaning-el').querySelector('.hidden-list'), 300);
-                event.target.closest('.leaning-el').classList.add('active-el');
-
-            }
-
-        })
-    })
+    // let books = document.querySelectorAll('.leaning-button')
+    // books.forEach(function(book) {
+    //     book.addEventListener('click', function(event) {
+    //         if (event.target.closest('.leaning-el').classList.contains('active-el')) {
+    //             slideUp(event.target.closest('.leaning-el').querySelector('.hidden-list'), 300);
+    //             event.target.closest('.leaning-el').classList.remove('active-el');
+    //         } else {
+    //             if (document.querySelector('.active-el')) {
+    //                 slideToggle(document.querySelector('.active-el .hidden-list'), 300);
+    //                 document.querySelector('.active-el').classList.toggle('active-el');
+    //             }
+    //             slideDown(event.target.closest('.leaning-el').querySelector('.hidden-list'), 300);
+    //             event.target.closest('.leaning-el').classList.add('active-el');
+    //         }
+    //     })
+    // })
 
 
     function getScrollbarWidth() {
@@ -270,34 +182,23 @@ document.addEventListener("DOMContentLoaded", function(event) {
         let modalWindow = document.querySelector('[data-modal=' + modal.getAttribute('data-modal-open') + ']')
         modalWindow.classList.add('modal-open');
         if (document.body.offsetHeight > window.innerHeight) {
-            document.body.classList.add('bodylock');
             document.body.style.paddingRight = getScrollbarWidth() + 'px';
-            document.querySelector('.header').style.paddingRight = getScrollbarWidth() + 'px';
-        }
-        if (modal.getAttribute('data-modal-open') == 'testimonial') {
-            let text = modal.getAttribute('data-descr')
-            let photo = modal.closest('.slider-slide').querySelector('.persone-photo img')
-            let name = modal.closest('.slider-slide').querySelector('.persone-name')
-            let role = modal.closest('.slider-slide').querySelector('.persone-role')
-            document.querySelector('.full-testimonial').innerHTML = text;
-            modalWindow.querySelector('.persone-photo img').setAttribute('src', photo.getAttribute('src'));
-            modalWindow.querySelector('.persone-name').textContent = name.textContent;
-            modalWindow.querySelector('.persone-role').textContent = role.textContent;
-
-        }
-        if (modal.getAttribute('data-modal-open') == 'video') {
-            let videoSrc = modalWindow.querySelector('.m-video').getAttribute('data-video');
-            modalWindow.querySelector('.m-video').innerHTML = '<iframe src="' + videoSrc + '?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            // document.querySelector('.header').style.paddingRight = getScrollbarWidth() + 'px';
+            document.body.classList.add('bodylock');
+            let tourImg = modal.closest('.party-card').querySelector('.p-party-img picture img').currentSrc;
+            let tourTitle = modal.closest('.party-card').querySelector('.p-party-title').textContent;
+            let fullDescr = modal.getAttribute('full-descr')
+            let timeDescr = modal.getAttribute('time-descr')
+            let priceDescr = modal.getAttribute('price-descr')
+            modalWindow.querySelector('.descr-img img').setAttribute('src', tourImg);
+            modalWindow.querySelector('.descr-title').textContent = tourTitle;
+            modalWindow.querySelector('.party-time span').textContent = timeDescr;
+            modalWindow.querySelector('.party-value span').textContent = priceDescr;
+            modalWindow.querySelector('.party-must').innerHTML = fullDescr;
 
         }
 
     }
-
-
-    var stopVideo = function(element) {
-        var iframe = element.querySelector('iframe');
-        iframe.remove()
-    };
 
 
     function closeModal(modal) {
@@ -318,18 +219,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 }
             }
         });
-
-
     }
 
 
     modals.forEach(function(modal) {
         modal.addEventListener('click', function(event) {
             event.preventDefault();
-
             openModal(modal);
-
-
         });
     });
 
