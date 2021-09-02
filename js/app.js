@@ -43,13 +43,13 @@ Loader.prototype = {
 
 var l = new Loader();
 l.require([
-        "/js/lazy-load.js"
+        "./js/lazy-load.js"
     ],
     function() {});
 
 var l = new Loader();
 l.require([
-        "/js/scroll.js"
+        "./js/scroll.js"
     ],
     function() {});
 
