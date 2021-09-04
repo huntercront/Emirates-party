@@ -59,6 +59,10 @@ body.loading .modal {
     transition: none!important;
 }
 
+body.noselect * {
+    user-select: none;
+}
+
 [tabindex="-1"]:focus:not(:focus-visible) {
     outline: 0!important
 }

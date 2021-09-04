@@ -78,6 +78,9 @@ if (mMenu) {
 
 document.addEventListener("DOMContentLoaded", function(event) {
 
+    document.querySelector('body').classList.remove('loading')
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
 
     var l = new Loader();
     l.require([
