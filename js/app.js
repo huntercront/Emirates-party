@@ -78,6 +78,13 @@ if (mMenu) {
 
 document.addEventListener("DOMContentLoaded", function(event) {
 
+    let chat = document.querySelector('.in-chat')
+    chat.addEventListener('click', function(e) {
+        this.classList.remove('counter-show')
+        this.classList.toggle('pulse-anim')
+        this.classList.toggle('show-links')
+    })
+
     document.querySelector('body').classList.remove('loading')
     document.addEventListener('contextmenu', event => event.preventDefault());
 
