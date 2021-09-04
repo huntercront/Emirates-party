@@ -1028,3 +1028,10 @@ p.label {
         margin-right: 0.5rem;
     }
 }
+
+@media screen and (max-width:540px) {
+    .in-chat {
+        right: 1rem;
+        bottom: 1rem;
+    }
+}
