@@ -78,11 +78,11 @@ if (mMenu) {
 
 document.addEventListener("DOMContentLoaded", function(event) {
 
-    let chat = document.querySelector('.in-chat')
+    let chat = document.querySelector('.in-chat-icon')
     chat.addEventListener('click', function(e) {
-        this.classList.remove('counter-show')
-        this.classList.toggle('pulse-anim')
-        this.classList.toggle('show-links')
+        this.closest('.in-chat').classList.remove('counter-show')
+        this.closest('.in-chat').classList.toggle('pulse-anim')
+        this.closest('.in-chat').classList.toggle('show-links')
     })
 
     document.querySelector('body').classList.remove('loading')
