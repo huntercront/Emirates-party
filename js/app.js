@@ -273,6 +273,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
             });
         }
 
+        window.onkeydown = function(event) {
+            if (event.keyCode == 27 && document.querySelector('.modal-open')) {
+                closeModal(document.querySelector('.modal-open'));
+            }
+        };
+
 
         let last_known_scroll_position = 0;
         let ticking = false;

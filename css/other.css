@@ -687,11 +687,27 @@ section ul li+li {
         margin-right: 1rem;
         background: #fafafa;
     }
+    .modal-dialog {
+        margin: 2.75rem auto;
+        margin-bottom: 0;
+    }
 }
 
 @media screen and (max-width:540px) {
     .why .row {
         margin-top: 1.5rem;
+    }
+    .modal-body {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 0;
+    }
+    .party-value,
+    .party-time {
+        font-size: 1rem;
+    }
+    .descr-img-inner img {
+        height: 250px;
     }
 }
 
