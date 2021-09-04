@@ -12,14 +12,70 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet" href="./css/other.css" media="print" async onload="this.media='all'">
+    <noscript>
+					<link rel="stylesheet" href="./css/other.css">
+				</noscript>
+
     <title>Document</title>
 </head>
 
 <body>
+    <header class="header">
+        <div class="container">
+            <menu class="menu c-sb">
+                <a href="#" class="header-logo c-c">
+                    <img src="./img/ep-logo.svg" alt="Логотип">
+                </a>
+                <nav class="navigation">
+                    <ul class="c-s">
+                        <li>
+                            <a href="#party">Тусовки</a>
+                        </li>
+                        <li>
+                            <a href="#how">Как это работает</a>
+                        </li>
+                        <li>
+                            <a href="#contacts">Контакты</a>
+                        </li>
+
+                        <li>
+                            <a href="#faq">FAQ</a>
+                        </li>
+                        <li class="c-s">
+                            <a href="#" class="c-c h-social">
+                                <div class="icon icon-m"><img alt="Whatsapp" src="./img/whatsapp.svg">
+                                </div>
+                            </a>
+                            <a href="#" class="c-c h-social">
+                                <div class="icon icon-m"><img alt="Telegram" src="./img/telegram.svg">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contacts" class="btn cta">Написать</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="m-nav">
+                    <button class="mobile-icon c-c" aria-label="Открыть мобильное меню"><svg class="ham hamRotate ham1" viewBox="0 0 100 100">
+			<path class="line top"
+				d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40">
+			</path>
+			<path class="line middle" d="m 30,50 h 40"></path>
+			<path class="line bottom"
+				d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40">
+			</path>
+		</svg></button>
+                </div>
+            </menu>
+        </div>
+    </header>
+    <div class="header-overley"></div>
     <section class="hero colored bottom-overlay">
         <div class="container">
             <div class="bg-video">
-
                 <video class="lazy" playsinline autoplay="true" loop="true" data-src="./video/hero-bg.mp4" muted>
 														<source type="video/mp4" data-src="./video/hero-bg.mp4" />
 													</video>
@@ -39,39 +95,49 @@
     <section class="about colored">
         <div class="container">
             <div class="row c-c">
-                <div class="pc-col-50">
+                <div class="pc-col-50 col">
                     <h2>Что такое модельные тусовки</h2>
                     <p class="descr">Это мероприятия, которые проходят за границей, где девушкам (имидж моделям) платят за то, что они создают и поддерживают атмосферу и статус мероприятия, хорошо выглядят и веселятся.</p>
                     <p class="descr">Модельные тусовки проходят на лучших виллах или яхтах мира и на них обычно находятся от 10 до 30 имидж моделей. На тусовках проходят разные конкурсы и развлечения, присутствует алкоголь.</p>
                     <p class="descr">Такие тусовки может позволить не каждый и как правило их устраивают очень богатые люди из списка форбс. У каждого заказчика свои требования к моделям, разные условия и оплата.</p>
                     <p class="descr">Длительность заезда на тусовке в среднем от 5 до 25 дней где платят именно за каждый день проведенный на заезде, ставка от $500 до $3000 в день.</p>
                 </div>
-                <div class="pc-col-50">
+                <div class="pc-col-50 col">
                     <div class="about-img c-c w-480">
                         <picture>
-                            <source type="image/png" media="(min-width: 640px)" srcset="./img/about@1x.png 1x, ./img/about@2x.png 2x">
-                            <img src="">
+                            <source type="image/webp" media="(min-width: 1024px)" data-srcset="./img/about@1x.webp 1x, ./img/about@2x.webp 2x">
+                            <source type="image/png" media="(min-width: 1024px)" data-srcset="./img/about@1x.png 1x, ./img/about@2x.png 2x">
+                            <source type="image/webp" media="(max-width: 1024px)" data-srcset="./img/about-m@1x.webp 1x, ./img/about-m@2x.webp 2x">
+                            <source type="image/png" media="(max-width: 1024px)" data-srcset="./img/about-m@1x.png 1x, ./img/about-m@2x.png 2x">
+                            <img class="lazy" width="480" height="445" data-src="./img/about@1x.png" alt="Девушки на пляже">
                         </picture>
                     </div>
                 </div>
             </div>
         </div>
-        <img data-src="./img/map.svg" alt="" class="map lazy">
+        <img data-src="./img/map.svg" alt="Карта" class="map lazy">
     </section>
     <section class="talk">
         <div class="container">
             <div class="row c-c">
-                <div class="pc-col-50">
-                    <h2 class="w-40">Напиши нам прямо сейчас</h2>
-                    <p class="descr l-size w-40">Мы расскажем, как стать имидж моделью, и отверим на все твои вопросы.</p>
-                    <a href="#contacts" class="btn cta">Написать</a>
+                <div class="pc-col-50 col">
+                    <div class="talk-content">
+                        <h2 class="w-40">Напиши нам прямо сейчас</h2>
+                        <p class="descr l-size w-40">Мы расскажем, как стать имидж моделью, и отверим на все твои вопросы.</p>
+                        <a href="#contacts" class="btn cta">Написать</a>
+                    </div>
                 </div>
-                <div class="pc-col-50">
+                <div class="pc-col-50 col">
 
                     <div class="talk-img c-c w-480">
                         <picture>
-                            <source type="image/png" media="(min-width: 640px)" srcset="./img/talk@1x.png 1x, ./img/talk@2x.png 2x">
-                            <img src="">
+                            <source type="image/webp" media="(min-width: 1024px)" data-srcset="./img/talk@1x.webp 1x, ./img/talk@2x.webp 2x">
+                            <source type="image/png" media="(min-width: 1024px)" data-srcset="./img/talk@1x.png 1x, ./img/talk@2x.png 2x">
+
+                            <source type="image/webp" media="(max-width: 1024px)" data-srcset="/img/talk-m@1x.webp 1x, ./img/talk-m@2x.webp 2x">
+                            <source type="image/png" media="(max-width: 1024px)" data-srcset="./img/talk-m@1x.png 1x, ./img/talk-m@2x.png 2x">
+
+                            <img class="lazy" width="480" height="473" data-src="./img/talk@1x.png" alt="Девушки на отдыхе">
                         </picture>
                     </div>
 
@@ -85,21 +151,21 @@
                 <h2 class="w-70 centured">Какие перспективы есть у имидж модели?</h2>
             </div>
             <div class="row">
-                <div class="pc-col-33">
+                <div class="pc-col-33 col tb-col-50 m-col-100">
                     <div class="promise-card">
                         <span class="card-number">01</span>
                         <h4 class="card-title l-size">Заработать хорошие деньги</h4>
                         <p class="descr card-descr">«Чистый» заработок имидж модели за один заезд начинается в среднем от 10 000$</p>
                     </div>
                 </div>
-                <div class="pc-col-33">
+                <div class="pc-col-33 col tb-col-50 m-col-100">
                     <div class="promise-card">
                         <span class="card-number">02</span>
                         <h4 class="card-title l-size">Посмотреть лучшие страны и острова бесплатно</h4>
                         <p class="descr card-descr">Перелет, еда и проживание на лучших виллах и яхтах мира за счет заказчика</p>
                     </div>
                 </div>
-                <div class="pc-col-33">
+                <div class="pc-col-33 col tb-col-50 m-col-100">
                     <div class="promise-card">
                         <span class="card-number">03</span>
                         <h4 class="card-title l-size">Завести знакомства</h4>
@@ -107,14 +173,14 @@
                         </p>
                     </div>
                 </div>
-                <div class="pc-col-33">
+                <div class="pc-col-33 col tb-col-50 m-col-100">
                     <div class="promise-card">
                         <span class="card-number">04</span>
                         <h4 class="card-title l-size">Получить бесплатный шоппинг и подарки</h4>
                         <p class="descr card-descr">Многие заказчики очень щедры и дают деньги на шопинг от 1000$ и выше, а если ты особенно понравишься заказчику, то дорогие подарки обеспечены, например часы ролекс, которые стоят не один миллион рублей</p>
                     </div>
                 </div>
-                <div class="pc-col-33">
+                <div class="pc-col-33 col tb-col-50 m-col-100">
                     <div class="promise-card">
                         <span class="card-number">05</span>
                         <h4 class="card-title l-size">Обеспечить свою жизнь</h4>
@@ -126,22 +192,22 @@
     </section>
 
     <div class="colored banner bottom-overlay top-overlay">
-        <picture>
-            <source type="image/jpeg" media="(min-width: 640px)" srcset="./img/banner-bg@1x.jpg 1x, ./img/banner-bg@2x.jpg 2x">
-            <img class="lazy" src="">
-        </picture>
+
+        <video class="lazy" playsinline autoplay="true" loop="true" data-src="./video/bg-banner-1.mp4" muted data-poster="./img/banner-bg-1@1x.jpg">
+														<source type="video/mp4" data-src="./video/bg-banner-1.mp4" />
+													</video>
     </div>
     <section class="possibility colored">
         <div class="container">
             <h2>О возможностях</h2>
             <div class="row">
-                <div class="pc-col-50">
+                <div class="pc-col-50 col tb-col-50 m-col-100">
                     <div class="possibility-descr">
                         <p class="descr l-size">Как правило, каждую тусовку ты можешь посетить только единоразово, потом ищут новых моделей. Количество тусовок ограничено - самых около 8, посетив большую часть из них, можно легко поднять около 200 000$, поэтому к заработанным
                             деньгам надо подходить правильно</p>
                     </div>
                 </div>
-                <div class="pc-col-50">
+                <div class="pc-col-50 col tb-col-50 m-col-100">
                     <div class="possibility-descr">
                         <p class="descr l-size">Людей, которые платят такие деньги, очень мало. У девушек происходят в среднем от 4 до 6 таких вечеринок с принцами или шейхами, они решают какие-то свои финансовые вопросы и забывают об этом.</p>
                         <p class="descr l-size">Это не постоянная работа.</p>
@@ -152,11 +218,11 @@
     </section>
     <section class="for colored">
         <div class="container">
-            <div class="c-c">
+            <div class="c-c mobile-left">
                 <h2 class="w-70 centured">Для кого модельные тусовки?</h2>
             </div>
             <div class="row">
-                <div class="pc-col-50">
+                <div class="pc-col-50 col">
                     <p class="descr l-size">Тебе подойдут модельные тусовки, если ты красивая девушка и имеешь:</p>
                     <ul>
                         <li>Возраст от 18 до 25 лет</li>
@@ -170,11 +236,14 @@
 
                     <a href="#contacts" class="btn cta">Написать</a>
                 </div>
-                <div class="pc-col-50">
+                <div class="pc-col-50 col">
                     <div class="for-img c-c w-480">
                         <picture>
-                            <source type="image/png" media="(min-width: 640px)" srcset="./img/for@1x.png 1x, ./img/for@2x.png 2x">
-                            <img src="">
+                            <source type="image/webp" media="(min-width: 1024px)" data-srcset="./img/for@1x.webp 1x, ./img/for@2x.webp 2x">
+                            <source type="image/png" media="(min-width: 1024px)" data-srcset="./img/for@1x.png 1x, ./img/for@2x.png 2x">
+                            <source type="image/webp" media="(max-width: 1024px)" data-srcset="./img/for-m@1x.webp 1x, ./img/for-m@2x.webp 2x">
+                            <source type="image/jpeg" media="(max-width: 1024px)" data-srcset="./img/for-m@1x.jpg 1x, ./img/for-m@2x.jpg 2x">
+                            <img width="480" height="605" data-src="./img/for@1x.png" class="lazy" alt="Девушки в купальниках">
                         </picture>
                     </div>
                 </div>
@@ -211,24 +280,25 @@
         </div>
     </section>
 
-    <section class="party">
+    <section id="party" class="party">
         <div class="container">
             <h2 class="w-70">Тусовки Emirates-party</h2>
             <p class="descr l-size w-70">
                 Здесь, ты можешь ознакомиться с условиями модельных тусовок от наших лучших заказчиков.
             </p>
             <div class="row">
-                <div class="pc-col-33">
+                <div class="pc-col-33 col tb-col-50">
                     <div class="party-card">
                         <div class="p-party-img">
                             <picture>
-                                <source type="image/jpeg" srcset="./img/party-1@1x.jpg 1x, ./img/party-1@2x.jpg 2x">
-                                <img class="lazy" src="">
+                                <source type="image/webp" data-srcset="./img/party-1@1x.webp 1x, ./img/party-1@2x.webp 2x">
+                                <source type="image/jpeg" data-srcset="./img/party-1@1x.jpg 1x, ./img/party-1@2x.jpg 2x">
+                                <img width="368" height="187" class="lazy" data-src="./img/party-1@1x.jpg" alt="Отель в Дубае">
                             </picture>
                         </div>
                         <h4 class="p-party-title descr l-size">Король Дубаи</h4>
                         <p class="p-party-descr">Шейх Аль Мактум занимает 7-е место в рейтинге самых богатых королевских персон. Он знает толк в развлечениях — увлекается скачками, делает огромные ставки</p>
-                        <button class="btn-icon c-s" data-modal-open="descr" time-descr="Король. Тусовка с возможным продолжением в Дубай на 7-10 дней." price-descr="Оплата - от $14 000 до $ 30 000 за заезд, шоппинг от $ 5 000" full-descr="<p><strong>Требования:</strong></p><ul><li>возраст до 24 лет</li><li>рост от 170</li><li>стройное телосложение</li><li>чистая кожа</li><li>красивая улыбка</li></ul><p><strong>Запрещено:</strong></p><ul><li>татуировки</li><li>нарощенные волосы</li><li>накаченные губы и силикон</li></ul><p>На Короля берут тех, кто находятся в Дубай, поэтому мы оплачиваем вам билет и вы заранее летите в Дубай, проживаниевмодельной квартире).</p><p>Ожидание захода к 2-4 дня + сам заезд 4-12 дней.</p><p>Сначала будет ужин с Королем, послеон решает, ктоостается, а кто нет, обычно оставляют 2-4 модели. Кто не остается им все равно выплачиваетсякомпенсация.</p><p>Моделейотвозят на виллу, где есть все удобства, для комфортного проживания: отельные комнаты длямоделей, живете либо одна либовдвоем в комнате. В свободное время отдыхаете, занимаетесь своими делами.</p><p>На ужин с королемвас обычно зовут в 8-10часов вечера, смотрите телевизор, общаетесь, кушаете. Около 12 часов ужинзаканчивается.</p><p>1 день вас отравляют нашоппинг, дают $5000-$7000<br>2 день обычно бассейн, тренажерный зал.<br>3день экскурсия сафари<br>4 день бассейн,тренажерный зал.<br>И так далее.<p>Если понравитесь королю, то у можетеостаться на больший срок и у вас может бытьшопинг несколько раз(2-4) за заезд по $5000-$7000.</p>"><div class="icon icon-s">
+                        <button class="btn-icon c-s" data-modal-open="descr" time-descr="Тусовка с возможным продолжением в Дубай на 7-10 дней." price-descr="Оплата - от $14 000 до $ 30 000 за заезд, шоппинг от $ 5 000" full-descr="<p><strong>Требования:</strong></p><ul><li>возраст до 24 лет</li><li>рост от 170</li><li>стройное телосложение</li><li>чистая кожа</li><li>красивая улыбка</li></ul><p><strong>Запрещено:</strong></p><ul><li>татуировки</li><li>нарощенные волосы</li><li>накаченные губы и силикон</li></ul><p>На Короля берут тех, кто находятся в Дубай, поэтому мы оплачиваем вам билет и вы заранее летите в Дубай, проживаниевмодельной квартире).</p><p>Ожидание захода к 2-4 дня + сам заезд 4-12 дней.</p><p>Сначала будет ужин с Королем, послеон решает, ктоостается, а кто нет, обычно оставляют 2-4 модели. Кто не остается им все равно выплачиваетсякомпенсация.</p><p>Моделейотвозят на виллу, где есть все удобства, для комфортного проживания: отельные комнаты длямоделей, живете либо одна либовдвоем в комнате. В свободное время отдыхаете, занимаетесь своими делами.</p><p>На ужин с королемвас обычно зовут в 8-10часов вечера, смотрите телевизор, общаетесь, кушаете. Около 12 часов ужинзаканчивается.</p><p>1 день вас отравляют нашоппинг, дают $5000-$7000<br>2 день обычно бассейн, тренажерный зал.<br>3день экскурсия сафари<br>4 день бассейн,тренажерный зал.<br>И так далее.<p>Если понравитесь королю, то у можетеостаться на больший срок и у вас может бытьшопинг несколько раз(2-4) за заезд по $5000-$7000.</p>"><div class="icon icon-s">
 																									<svg width="24" height="24" fill="none">
 																									<defs />
 																									<path stroke="#FFA445" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -237,17 +307,19 @@
                     </div>
                 </div>
 
-                <div class="pc-col-33">
+                <div class="pc-col-33 col tb-col-50">
                     <div class="party-card">
                         <div class="p-party-img">
                             <picture>
-                                <source type="image/jpeg" srcset="./img/party-2@1x.jpg 1x, ./img/party-2@2x.jpg 2x">
-                                <img class="lazy" src="">
+                                <source type="image/webp" data-srcset="./img/party-2@1x.webp 1x, ./img/party-2@2x.webp 2x">
+                                <source type="image/jpeg" data-srcset="./img/party-2@1x.jpg 1x, ./img/party-2@2x.jpg 2x">
+                                <img width="368" height="187" class="lazy" data-src="./img/party-2@1x.jpg" alt="Дубай видсверху">
                             </picture>
                         </div>
                         <h4 class="p-party-title descr l-size">Король Абу Даби</h4>
                         <p class="p-party-descr">Его высочество шейх Мухаммед, король эмирата Абу-Даби, заместитель верховного главнокомандующего Вооруженными силами Объединенных Арабских Эмиратов</p>
-                        <button class="btn-icon c-s" data-modal-open="descr">
+                        <button class="btn-icon c-s" data-modal-open="descr" time-descr="Тусовка с возможным прод. от 1,5 до 6 месяцев." price-descr="Оплата: $600 в день чистыми, выходит около $18 000-$100 000 за заезд, прод - $2000 + возможны дорогие подарки (часы, украшения)."
+                            full-descr="<p><strong>Требования:</strong></p><ul><li>возраст до 25 лет</li><li>рост 167-172, высоких не любит</li><li>стройное телосложение</li><li>чистая кожа</li><li>красивая улыбка</li></ul><p><strong>Запрещено:</strong></p><ul><li>большие татуировки</li><li>нарощенные волосы</li><li>накачанные губы и силикон</li></ul><p>Продолжительность заезда от 1,5 месяца до 6, там уже как вы захотите. После прилета вас забирают с аэропорта и отвозят вотель 5*, там вы сдаете мед. анализы, если анализы хорошие, то остаетесь в отеле на оплачиваемый 2-ух недельныйкарантин,(только у меня договорённость, чтобы вам оплачивали время проведённое на карантине, если летите через другихменеджеров, то будете сидеть на карантине бесплатно), потом еще раз сдаете тест, далее вас отвозят на остров, где живутвсе остальные модели.</p>">
 																																			<div class="icon icon-s">
 																																				<svg width="24" height="24" fill="none">
 																																					<defs />
@@ -259,17 +331,18 @@
                     </div>
                 </div>
 
-                <div class="pc-col-33">
+                <div class="pc-col-33 col tb-col-50">
                     <div class="party-card">
                         <div class="p-party-img">
                             <picture>
-                                <source type="image/jpeg" srcset="./img/party-3@1x.jpg 1x, ./img/party-3@2x.jpg 2x">
-                                <img class="lazy" src="">
+                                <source type="image/webp" data-srcset="./img/party-3@1x.webp 1x, ./img/party-3@2x.webp 2x">
+                                <source type="image/jpeg" data-srcset="./img/party-3@1x.jpg 1x, ./img/party-3@2x.jpg 2x">
+                                <img width="368" height="187" class="lazy" data-src="./img/party-3@1x.jpg " alt="Замок">
                             </picture>
                         </div>
                         <h4 class="p-party-title descr l-size">Хаза</h4>
                         <p class="p-party-descr">Шейх Хаза - советник главы государства ОАЭ по вопросам национальной безопасности, миллиардер</p>
-                        <button class="btn-icon c-s" data-modal-open="descr">
+                        <button class="btn-icon c-s" data-modal-open="descr" time-descr="Тусовка с возможным продолжением в Абу-Даби на 10-15 дней." price-descr="Оплата - $800-$1000 в день, прод. $2000" full-descr="<p><strong>Требования:</strong></p><ul><li>возраст до 23 лет</li><li>рост от 173</li><li>топ модели</li><li>бейби фейс</li></ul><p><strong>Запрещено:</strong></p><ul><li>татуировки</li><li>шрамы</li><li>пирсинг</li><li>нарощенные волосы исиликон</li></ul><p>О данной тусовке запрещено подробно рассказывать из-за конфиденциальности.</p><p>Вам покупаютбилет, по прилету вас встречает водитель и отвозит на виллу, где располагаются другие модели, в среднем на тусовкенаходится 5-10 моделей.</p><p>На вилле есть всё, что нужно для комфортного проживания: бассейн, тренажерный зал,отдельные комнаты для моделей и многое другое.</p>">
 																																			<div class="icon icon-s">
 																																				<svg width="24" height="24" fill="none">
 																																					<defs />
@@ -281,18 +354,19 @@
                     </div>
                 </div>
 
-                <div class="pc-col-33">
+                <div class="pc-col-33 col tb-col-50">
                     <div class="party-card">
                         <div class="p-party-img">
                             <picture>
-                                <source type="image/jpeg" srcset="./img/party-4@1x.jpg 1x, ./img/party-4@2x.jpg 2x">
-                                <img class="lazy" src="">
+                                <source type="image/webp" data-srcset="./img/party-4@1x.webp 1x, ./img/party-4@2x.webp 2x">
+                                <source type="image/jpeg" data-srcset="./img/party-4@1x.jpg 1x, ./img/party-4@2x.jpg 2x">
+                                <img width="368" height="187" class="lazy" data-src="./img/party-4@1x.jpg" alt="Вилла с бассейном">
                             </picture>
                         </div>
                         <h4 class="p-party-title descr l-size">Мурад</h4>
                         <p class="p-party-descr">Молодой, щедрый шейх, друг многих шейхов из королевских семей. Проживание на вилле со всеми условиями: спа, спорт-зал, еда, казино и много развлечений
                         </p>
-                        <button class="btn-icon c-s" data-modal-open="descr">
+                        <button class="btn-icon c-s" data-modal-open="descr" time-descr="Тусовка с возможным продолжением от 1 до 3 месяцев." price-descr="Оплата - $600 в день (чистыми), выходит $18 000 - $ 54 000 за заезд." full-descr="<p><strong>Требования:</strong></p><ul><li>возраст до 24 лет</li><li>рост от 164 см</li><li>стройное телосложение </li><li>чистая кожа</li><li>красивая улыбка</li></ul><p><strong>Запрещено:</strong></p><ul><li>большие татуировки</li><li>нарощенные волосы исиликон</li></ul><p>роживание на вилле со всеми условиями: спа, спорт-зал, еда, казино и много развлечений. </p><p>Напродолжение новых выбирают редко, но если вас выберут, нужно быть готовыми.</p><p>Вам покупают билет, по прилетувас встречает водитель и отвозит на виллу, где располагаются другие модели. После прилета вас забирают с аэропорта иотвозят в отель 5 звезд, там вы сдаете мед. анализы, если анализы хорошие, то остаетесь в отеле на оплачиваемый 2-ухнедельный карантин, потом еще раз сдаете тест, далее вас отвозят на виллу, где живут все остальные модели.</p>">
 																																			<div class="icon icon-s">
 																																				<svg width="24" height="24" fill="none">
 																																					<defs />
@@ -304,18 +378,19 @@
                     </div>
                 </div>
 
-                <div class="pc-col-33">
+                <div class="pc-col-33 col tb-col-50">
                     <div class="party-card">
                         <div class="p-party-img">
                             <picture>
-                                <source type="image/jpeg" srcset="./img/party-5@1x.jpg 1x, ./img/party-5@2x.jpg 2x">
-                                <img class="lazy" src="">
+                                <source type="image/webp" data-srcset="./img/party-5@1x.webp 1x, ./img/party-5@2x.webp 2x">
+                                <source type="image/jpeg" data-srcset="./img/party-5@1x.jpg 1x, ./img/party-5@2x.jpg 2x">
+                                <img width="368" height="187" class="lazy" data-src="./img/party-5@1x.jpg" alt="Отель с автомобилями">
                             </picture>
                         </div>
                         <h4 class="p-party-title descr l-size">Хамдан</h4>
                         <p class="p-party-descr">Очень простая тусовка, где важен в основном возраст девушки. Типажи всегда разные. Отличная возможность для всех!
                         </p>
-                        <button class="btn-icon c-s" data-modal-open="descr">
+                        <button class="btn-icon c-s" data-modal-open="descr" time-descr="Тусовка с возможным продолжением в Абу-Даби на 10-14 дней." price-descr="Оплата - $200 день, прод $1000, шоппинг от $1000" full-descr="<p><strong>Требования:</strong></p><ul><li>не старше 2001 года рождения</li><li>стройное телосложение</li></ul><p><strong>Запрещено:</strong></p><ul><li>большие татуировки</li><li>нарощенные волосы исиликон</li></ul><p>Самая популярная тусовка и с нееначинают многие, так как попасть на нее легче всего. Вам покупают билет, по прилету вас встречает водитель и отвозитна виллу, где располагаются другие модели, в среднем на тусовке находится 10-15 моделей.</p><p>На вилле есть всё,что нужно для комфортного проживания (бассейн, тренажерный зал и тд), в первые двое суток знакомство с шейхом, послезнакомства решат кто останется на 2 недели, а кто поедет домой, если домой, то компенсация от 500$.</p>">
 																			<div class="icon icon-s">
 																				<svg width="24" height="24" fill="none">
 																					<defs />
@@ -328,18 +403,19 @@
                 </div>
 
 
-                <div class="pc-col-33">
+                <div class="pc-col-33 col tb-col-50">
                     <div class="party-card">
                         <div class="p-party-img">
                             <picture>
-                                <source type="image/jpeg" srcset="./img/party-6@1x.jpg 1x, ./img/party-6@2x.jpg 2x">
-                                <img class="lazy" src="">
+                                <source type="image/webp" data-srcset="./img/party-6@1x.webp 1x, ./img/party-6@2x.webp 2x">
+                                <source type="image/jpeg" data-srcset="./img/party-6@1x.jpg 1x, ./img/party-6@2x.jpg 2x">
+                                <img width="368" height="187" class="lazy" data-src="./img/party-6@1x.jpg" alt="Небоскребы в Дубае">
                             </picture>
                         </div>
                         <h4 class="p-party-title descr l-size">Принц Саудии</h4>
                         <p class="p-party-descr">Наследный принц Саудовской Аравии. Одна из самых дорогих и прибыльных тусовок. Типаж: топ, бейби фейс, также востребованы девушки с необычной внешностью
                         </p>
-                        <button class="btn-icon c-s" data-modal-open="descr">
+                        <button class="btn-icon c-s" data-modal-open="descr" time-descr="Тусовка с возможным прод. в Эр-Риад от 2-х месяцев." price-descr="Оплата - $3000 в день, бюджет выше для инстазвезд, моделей с обложками." full-descr="<p><strong>Требования:</strong></p><ul><li>возраст 18-23 лет</li><li>рост от 170</li><li>топ модели</li><li>бейби фейс</li></ul><p><strong>Запрещено:</strong></p><ul><li>шрамы</li><li>пирсинг</li></ul><p>Вам покупают билет, вы прилетаете вДубай, вас заселяют отель с другими девушками, где вы можете пробыть 10-14 дней, здесь вы ждете пока прилетят вседевушки со всего мира и сформируется заезд.<br><br>После того как все прилетели, вы все вместе вылетаете в г. Риад,где вас встречает автобус и отвозит на виллу, где вы сидите карантин (оплачиваемый).</p><p>Проживание на виллеили на яхте. Вечеринки проходят на острове или в клубе в пустыне. Вечеринки проходят по разному, 1-3 раза внеделю, но ставка оплачивается ежедневно за каждый день нахождения на заезде, независимо от вечеринок.</p><p>На вилле или яхте есть все для комфортного проживания начиная от тренажерного зала, заканчиваяповарами, мастерами маникюра, есть массажистка и салон красоты и тд.</p><p>Питание: 3-4 раза в день (на яхтахготовят повара, половину из них имеют звезды Мишлен). Питание вкусное и разнообразное: морепродукты, итальянская,японская, бразильская кухня. Фрукты, овощи и сладости всегда на столе.</p><p>На вилле есть горничные, которые завами убирают, моют посуду, застилают постель, гладят и стирают вещи.</p><p>Времени свободного достаточно. У вас враспоряжении много развлечений: загораете на пляже, играете в волейбол, серфинг (есть свой инструктор) и многодругих водных развлечений, спорт зал.</p>">
 																																			<div class="icon icon-s">
 																																				<svg width="24" height="24" fill="none">
 																																					<defs />
@@ -357,10 +433,10 @@
     </section>
 
     <div class="colored banner bottom-overlay top-overlay">
-        <picture>
-            <source type="image/jpeg" media="(min-width: 640px)" srcset="./img/banner-bg-2@1x.jpg 1x, ./img/banner-bg-2@2x.jpg 2x">
-            <img class="lazy loading" src="" data-ll-status="loading">
-        </picture>
+
+        <video class="lazy" playsinline autoplay="true" loop="true" data-src="./video/bg-banner-2.mp4" muted data-poster="./img/banner-bg-2@1x.jpg">
+														<source type="video/mp4" data-src="./video/bg-banner-2.mp4" />
+													</video>
     </div>
     <section class="colored why">
         <div class="container">
@@ -369,14 +445,14 @@
                 Почему тебе стоит работать с Emirates-party
             </p>
             <div class="row">
-                <div class="pc-col-33">
+                <div class="pc-col-33 col tb-col-50 m-col-100">
                     <div class="promise-card">
                         <span class="card-number">01</span>
                         <h4 class="card-title l-size">Анонимность</h4>
                         <p class="descr card-descr">Репутация для нас важнее всего, и мы не резглашаем информацию о моделях. Вашу анкету видит только менеджер и заказчик</p>
                     </div>
                 </div>
-                <div class="pc-col-33">
+                <div class="pc-col-33 col tb-col-50 m-col-100">
                     <div class="promise-card">
                         <span class="card-number">02</span>
                         <h4 class="card-title l-size">Опыт</h4>
@@ -384,7 +460,7 @@
                     </div>
                 </div>
 
-                <div class="pc-col-33">
+                <div class="pc-col-33 col tb-col-50 m-col-100">
                     <div class="promise-card">
                         <span class="card-number">03</span>
                         <h4 class="card-title l-size">Скорость</h4>
@@ -395,10 +471,10 @@
         </div>
     </section>
 
-    <section class="steps colored">
+    <section id="how" class="steps colored">
         <div class="container">
             <div class="row">
-                <div class="pc-col-50">
+                <div class="pc-col-50 col">
                     <div class="title-line">
                         <h2>Всего 6 шагов</h2>
                         <p class="descr l-size">
@@ -406,11 +482,11 @@
                         </p>
                     </div>
                 </div>
-                <div class="pc-col-50">
+                <div class="pc-col-50 col">
                     <div class="step">
                         <div class="icon-number c-s">
                             <div class="step-img">
-                                <img class="lazy c-c" src="./img/step-1.jpg" alt="Картинка шага">
+                                <img class="lazy c-c" data-src="./img/step-1.jpg" alt="фотограф">
                             </div>
                             <spam class="large-number">01</spam>
                         </div>
@@ -424,7 +500,7 @@
                     <div class="step">
                         <div class="icon-number c-s">
                             <div class="step-img">
-                                <img class="lazy c-c" src="./img/step-2.jpg" alt="Картинка шага">
+                                <img class="lazy c-c" data-src="./img/step-2.jpg" alt="Согласование">
                             </div>
                             <spam class="large-number">02</spam>
                         </div>
@@ -437,7 +513,7 @@
                     <div class="step">
                         <div class="icon-number c-s">
                             <div class="step-img">
-                                <img class="lazy c-c" src="./img/step-3.jpg" alt="Картинка шага">
+                                <img class="lazy c-c" data-src="./img/step-3.jpg" alt="Крыло самолета">
                             </div>
                             <spam class="large-number">03</spam>
                         </div>
@@ -451,7 +527,7 @@
                     <div class="step">
                         <div class="icon-number c-s">
                             <div class="step-img">
-                                <img class="lazy c-c" src="./img/step-4.jpg" alt="Картинка шага">
+                                <img class="lazy c-c" data-src="./img/step-4.jpg" alt="Дорогой автомобиль">
                             </div>
                             <spam class="large-number">04</spam>
                         </div>
@@ -463,7 +539,7 @@
                     <div class="step">
                         <div class="icon-number c-s">
                             <div class="step-img">
-                                <img class="lazy c-c" src="./img/step-5.jpg" alt="Картинка шага">
+                                <img class="lazy c-c" data-src="./img/step-5.jpg" alt="Тусовка и отдых">
                             </div>
                             <spam class="large-number">05</spam>
                         </div>
@@ -477,7 +553,7 @@
                     <div class="step">
                         <div class="icon-number c-s">
                             <div class="step-img">
-                                <img class="lazy c-c" src="./img/step-6.jpg" alt="Картинка шага">
+                                <img class="lazy c-c" data-src="./img/step-6.jpg" alt="Самолет">
                             </div>
                             <spam class="large-number">06</spam>
                         </div>
@@ -491,6 +567,188 @@
             <div class="c-c step-cta"><a href="#contacts" class="btn cta">Написать</a></div>
         </div>
     </section>
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Частые вопросы</h2>
+
+            <div class="faq-element">
+                <div class="faq-q">
+                    <p class="descr l-size">Как обеспечивается безопасность девушек?</p>
+                    <button class="open-a c-c" aria-label="Показать ответ"><div class="icon icon-s c-c">
+<svg width="24" height="24" fill="none">
+	<defs />
+	<path  stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12" />
+</svg>
+																				</div>
+																			</button>
+                </div>
+                <div class="faq-a hidden-list">
+                    <p>Что касается модельных тусовок у шейхов высокого ранга, как у меня, то истории про изнасилования или рабство — это полный бред. Все мои заказчики это в основном шейхи относящиеся к правящей династии ОАЭ, короли и принцы, они уже проверены
+                        годами. Все условия тусовок в обязательном порядке проговариваются перед вылетом.</p>
+                    <p>Шейхи очень хорошо и уважительно относятся к девушкам, разговаривают на "вы" никогда ни к чему насильно не принуждают. С людьми такого уровня проблем не бывает, да и им самим никакие скандалы не нужны, так как они являются публичными
+                        людьми.
+                    </p>
+                    <p>
+                        Есть конечно в этой сфере заказчики с странностями, но об этих странностях модели всегда информируются заранее и спрашивают готова ли она к ним, и могу сказать что девушки находятся и на таких заказчиков, потому что за все эти странности заказчика платят
+                        намного бОльшие деньги, чем на обычных стандартных тусовках.
+                    </p>
+                    <p>
+                        Что касается меня, то я с заказчиками со странностями не работаю, я люблю когда уже все проверено, без фокусов и стабильно, так я спокоен за своих моделей и свою репутацию.
+                    </p>
+                    <p>Лично на моем опыте, не было ни одного инцидента ни с изнасилованием, ни с беременностью девушек.</p>
+                </div>
+            </div>
+
+            <div class="faq-element">
+                <div class="faq-q">
+                    <p class="descr l-size">Забирают ли на заезде паспорт?</p>
+                    <button class="open-a c-c" aria-label="Показать ответ">
+															<div class="icon icon-s c-c">
+																<svg width="24" height="24" fill="none">
+																	<defs />
+																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12" />
+																</svg>
+															</div>
+														</button>
+                </div>
+                <div class="faq-a hidden-list">
+                    <p>Паспорт ни на одной тусовке не забирают, максимум могут попросить показать, когда хотят убедиться в возрасте или сфотографировать для покупки билетов.</p>
+                    <p>
+                        На некоторых тусовках телефоны забирают лишь на время тусовки и выдают другие телефоны со сломанной камерой, потому что на самих тусовках снимать и фотографировать запрещено, а пользоваться своим телефоном полноценно вы можете на отдельной вилле, где
+                        вы живете с остальными моделями.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-element">
+                <div class="faq-q">
+                    <p class="descr l-size">Заключают ли договор?</p>
+                    <button class="open-a c-c" aria-label="Показать ответ">
+																											<div class="icon icon-s c-c">
+																												<svg width="24" height="24" fill="none">
+																													<defs />
+																													<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12" />
+																												</svg>
+																											</div>
+																										</button>
+                </div>
+                <div class="faq-a hidden-list">
+                    <p>Нет, договоров не заключают, это не официальная работа, да и работой то это сложно назвать, больше сочетание отдыха за который еще и очень прилично платят.</p>
+                </div>
+            </div>
+
+            <div class="faq-element">
+                <div class="faq-q">
+                    <p class="descr l-size">Как обеспечивается конфиденциальность моделей?</p>
+                    <button class="open-a c-c" aria-label="Показать ответ">
+															<div class="icon icon-s c-c">
+																<svg width="24" height="24" fill="none">
+																	<defs />
+																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12" />
+																</svg>
+															</div>
+														</button>
+                </div>
+                <div class="faq-a hidden-list">
+                    <p>Если данные вашей анкеты утекут и всплывут в неположенном месте по моей вине, то мне запретят заниматься моей деятельностью и я могу попасть в черный список, а я люблю свою работу и очень хорошо зарабатываю, и терять ее не хочу. Поэтому
+                        я в первую очередь заинтересован в вашей конфиденциальности и соблюдаю все меры предосторожности.</p>
+                    <p>Со своей стороны я вас тоже прошу соблюдать конфиденциальность и чтобы ваши данные не попали в третьи руки, отправляйте анкету и фото только одному менеджеру, иначе ВАША АНКЕТА будет в засвете и вас могут вообще ни куда не взять, не
+                        надо пожалуйста "пытать счастье" и отправлять повсюду заявки, по типу: «там не выберут - значит здесь выберут».
+                    </p>
+                    <p>База заказчиков одна по всему миру, просто запаситесь, пожалуйста, терпением, вас либо возьмут, либо нет и не важно какому менеджеру вы направите свою анкету, разница лишь в условиях и надежности менеджера.</p>
+                </div>
+            </div>
+
+
+            <div class="faq-element">
+                <div class="faq-q">
+                    <p class="descr l-size">Будут ли у меня какие то расходы на поездку?</p>
+                    <button class="open-a c-c" aria-label="Показать ответ">
+																											<div class="icon icon-s c-c">
+																												<svg width="24" height="24" fill="none">
+																													<defs />
+																													<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12" />
+																												</svg>
+																											</div>
+																										</button>
+                </div>
+                <div class="faq-a hidden-list">
+                    <p>При сотрудничестве со мной, модели не платят ни каких денег вперед, я не требую от вас покупать себе билеты на самолет, если надо оформить и оплатить визу, то это тоже все за мой счет.</p>
+                    <p>За всю мою работу вы отдаете стандартную в этой сфере комиссию 30%, комиссия высчитывается уже после того, как получите деньги по окончании заезда, оплата производится наличными, как правило в долларах!
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="faq-element">
+                <div class="faq-q">
+                    <p class="descr l-size">А если мой рост ниже 170?</p>
+                    <button class="open-a c-c" aria-label="Показать ответ">
+																											<div class="icon icon-s c-c">
+																												<svg width="24" height="24" fill="none">
+																													<defs />
+																													<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12" />
+																												</svg>
+																											</div>
+																										</button>
+                </div>
+                <div class="faq-a hidden-list">
+                    <p>Прошу девушек не прибавлять несуществующих сантиметров к своему росту при подаче анкеты.</p>
+                    <p>Я конечно понимаю, что иногда охота приврать про рост, потому что сам немного был обделен природой в этом плане, а для парня рост это очень не маловажный фактор))
+                    </p>
+                    <p>Жизнь многогранна, так же как и наши заказчики и их предпочтения, поэтому не стоит думать, что нам нужны только высокие девушки 90-60-90, поэтому не стоит прибавлять себе лишних 5 сантиметров, потому что для невысоких тоже есть тусовки,
+                        например король Абу-Даби не любит высоких девушек, так же еще есть пару предложений для невысоких, пишите мне и я расскажу подробнее.</p>
+                    <p>Вообщем пишем реальные цифры и параметры и честно сотрудничаем.</p>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <div id="contacts" class="colored banner bottom-overlay top-overlay prefooter">
+        <div class="container">
+            <div class="contacts">
+                <h2 class="w-70">Напиши нам</h2>
+                <p class="descr l-size w-70">
+                    Мы ответим на все твои вопросы
+                </p>
+                <div class="row">
+                    <div class="contacts-col contact-info">
+                        <p class="label">Телефон</p>
+                        <a class="contacts-link" href="tel:8 800 765 88 25" title="Позвонить">8 800 765 88 25</a>
+                    </div>
+                    <div class="contacts-col contact-info">
+                        <p class="label">email</p>
+                        <a class="contacts-link" href="mailto:info@emirates-party.ru" title="Написать">info@emirates-party.ru</a>
+                    </div>
+                    <div class="contacts-col">
+                        <a href="#" class="social whats-app c-c" title="Написать в Whatsapp">
+                            <div class="icon icon-m"><img class="lazy" data-src="./img/whatsapp.svg" alt="Whatsapp"></div>Whatsapp
+                        </a>
+                    </div>
+                    <div class="contacts-col">
+                        <a href="#" class="social telegram c-c" title="Написать в Telegram">
+                            <div class="icon icon-m"><img class="lazy" data-src="./img/telegram.svg" alt="Telegram"></div>Telegram
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <video class="lazy" playsinline autoplay="true" loop="true" data-src="./video/bg-banner-3.mp4" muted data-poster="./img/banner-bg-3@1x.jpg">
+																						<source type="video/mp4" data-src="./video/bg-banner-3.mp4" />
+																					</video>
+    </div>
+
+    <footer class="footer colored">
+        <div class="container">
+            <p class="copyright">©2018 - 2021 Emirates-party. Все права защищены.</p>
+        </div>
+    </footer>
 
 </body>
 <div class="modal-overley"></div>
