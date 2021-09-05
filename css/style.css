@@ -549,7 +549,7 @@ h2 {
 }
 
 .header a.header-logo {
-    max-width: 14rem;
+    max-width: 10rem;
     padding: 0;
     transition: 150ms ease-in;
     transition-property: opacity;
@@ -848,7 +848,7 @@ section {
 
 @media screen and (max-width:540px) {
     .header a.header-logo {
-        max-width: 10rem;
+        max-width: 8rem;
     }
     h1 {
         font-size: 3rem;
