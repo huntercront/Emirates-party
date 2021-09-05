@@ -256,10 +256,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
         let writeButton = document.querySelector('.modal .modal-cta')
-        writeButton.addEventListener('click', function(event) {
-            closeModal(document.querySelector('.modal'));
-        });
-
+        if (writeButton) {
+            writeButton.addEventListener('click', function(event) {
+                closeModal(document.querySelector('.modal'));
+            });
+        }
 
 
 

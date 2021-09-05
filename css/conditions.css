@@ -1,0 +1,27 @@
+.conditions {
+    margin-top: 6.5rem;
+}
+
+.conditions h1 {
+    font-size: 3rem;
+}
+
+.conditions-menu {
+    background: var(--main);
+    border-bottom: transparent;
+}
+
+.conditions-cont {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.conditions {
+    margin-bottom: 4rem;
+}
+
+.conditions-body .prefooter .container,
+.conditions-body .footer .container {
+    max-width: 720px;
+    margin: 0 auto;
+}
