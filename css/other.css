@@ -990,6 +990,19 @@ p.label {
     font-size: 0.775rem;
 }
 
+.copyright a {
+    border-bottom: 1px solid;
+    transition: 150ms ease-in;
+    transition-property: border-bottom, opacity;
+    will-change: border-bottom, opacity;
+}
+
+.copyright a:hover {
+    border-bottom: 1px solid transparent;
+    color: var(--white);
+    opacity: 0.7;
+}
+
 .footer {
     padding-top: 7rem;
     padding-bottom: 1.5rem;
