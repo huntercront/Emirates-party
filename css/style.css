@@ -213,7 +213,8 @@ picture {
 
 svg {
     overflow: hidden;
-    vertical-align: middle
+    vertical-align: middle;
+    width: 100%;
 }
 
 table {
@@ -853,7 +854,7 @@ section {
         font-size: 3rem;
     }
     .hero .descr strong {
-        font-size: 1.25rem;
+        font-size: 1.55rem;
     }
     section {
         padding: 2rem 0;
