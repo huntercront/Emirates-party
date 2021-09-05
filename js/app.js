@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     })
 
     document.querySelector('body').classList.remove('loading')
-    document.addEventListener('contextmenu', event => event.preventDefault());
+        // document.addEventListener('contextmenu', event => event.preventDefault());
 
 
     var l = new Loader();
@@ -214,7 +214,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 document.querySelector('.header').style.paddingRight = getScrollbarWidth() + 'px';
                 document.body.classList.add('bodylock');
                 modalWindow.scrollTop = 0;
-                let tourImg = modal.closest('.party-card').querySelector('.p-party-img picture img').currentSrc;
+                let tourImg = modal.getAttribute('data-img')
                 let tourTitle = modal.closest('.party-card').querySelector('.p-party-title').textContent;
                 let fullDescr = modal.getAttribute('full-descr')
                 let timeDescr = modal.getAttribute('time-descr')
